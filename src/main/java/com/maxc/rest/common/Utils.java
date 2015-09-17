@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.net.InetAddress;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -428,6 +429,12 @@ public class Utils {
 
 		return true;
 	}
+	private static SecureRandom secureRandom = new SecureRandom();
+
+	public static String nextSessionId() {
+		return new BigInteger(130, secureRandom).toString(32);
+	}
+
 
 	/**
 	 * Title: matches : d
