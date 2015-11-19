@@ -31,6 +31,8 @@ public class Utils {
 
 	public static final Random random = new Random();
 
+
+
 	/**
 	 * 国旗到现在距离当前时间多少个约
 	 * 
@@ -427,6 +429,20 @@ public class Utils {
 			}
 		}
 
+		return true;
+	}/**
+	 *
+	 * @param @param ip
+	 * @param @return
+	 * @return boolean
+	 * @throws
+	 * @since : v1.0.0.0
+	 */
+	public static boolean isIp(String ip) {
+		String reg = "\\b((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\b";
+		if (!matches(ip, reg)) {
+			return false;
+		}
 		return true;
 	}
 	private static SecureRandom secureRandom = new SecureRandom();
