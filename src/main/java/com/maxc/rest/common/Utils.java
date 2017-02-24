@@ -445,11 +445,11 @@ public class Utils {
 		}
 		return true;
 	}
-	private static SecureRandom secureRandom = new SecureRandom();
+//	private static SecureRandom secureRandom = new SecureRandom();
 
-	public static String nextSessionId() {
-		return new BigInteger(130, secureRandom).toString(32);
-	}
+//	public static String nextSessionId() {
+//		return new BigInteger(130, secureRandom).toString(32);
+//	}
 
 
 	/**
